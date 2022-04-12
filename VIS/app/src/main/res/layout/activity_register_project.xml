@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:titleTextColor="@color/txt1"
+        app:title="Volunteer app service" />
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neumorphCardView"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:neumorph_shapeType="basin">
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_below="@+id/Email_et"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/no_background"
+            android:text="Email"
+            android:paddingStart="@dimen/_20sdp"
+            tools:ignore="RtlCompat,RtlSymmetry"
+            android:textColor="@color/txt1"
+            android:textSize="@dimen/_15sdp" />
+    </soup.neumorphism.NeumorphCardView>
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:neumorph_shapeType="basin">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_below="@+id/Email_et"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/no_background"
+            android:text="Name"
+            tools:ignore="RtlCompat,RtlSymmetry"
+            android:textColor="@color/txt1"
+            android:textSize="@dimen/_15sdp" />
+    </soup.neumorphism.NeumorphCardView>
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:neumorph_shapeType="basin">
+        <TextView
+            android:id="@+id/slots"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/Email_et"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/no_background"
+            android:text="Slots"
+            android:gravity="center"
+            tools:ignore="RtlCompat,RtlSymmetry"
+            android:textColor="@color/txt1"
+            android:textSize="@dimen/_15sdp" />
+    </soup.neumorphism.NeumorphCardView>
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:neumorph_shapeType="basin">
+        <TextView
+            android:id="@+id/enteremail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:text="Email "
+            android:layout_below="@+id/Email_et"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/no_background"
+            android:gravity="center"
+            tools:ignore="RtlCompat,RtlSymmetry"
+            android:textColor="@color/txt1"
+            android:textSize="@dimen/_15sdp"/>
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphButton
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/txt1"
+        android:text="Confirm Now"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:id="@+id/confirnow" />
+
+</LinearLayout>
+
+</layout>

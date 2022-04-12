@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">VIS</string>
+    <string name="volunteer_in_service">Volunteer In Service</string>
+    <string name="image">image</string>
+    <string name="student_portal">Student Portal</string>
+    <string name="admin_portal">Admin Portal</string>
+    <string name="organization_portal">Organization Portal</string>
+    <string name="your_email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="cust_vis">CUST VIS</string>
+    <string name="Projects">Projects</string>
+    <string name="Attendence">Attendence</string>
+    <string name="register">Register</string>
+    <string name="starter_download">Download Start</string>
+</resources>

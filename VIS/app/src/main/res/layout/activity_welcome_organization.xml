@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_background"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarorg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/MyToolbarStyle"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_20sdp"
+            app:title="Volunteers App Service"
+            app:titleTextColor="@color/txt1" />
+
+        <ImageView
+            android:id="@+id/imgOrg"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:layout_below="@id/toolbarorg"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img2" />
+
+        <TextView
+            android:id="@+id/welcome_txtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgOrg"
+            android:layout_marginStart="@dimen/_15sdp"
+
+            android:text="Welcome to Organization VIS \nPortal"
+            android:textColor="@color/txt1"
+            android:textSize="@dimen/_18sdp"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/husnatkhalid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome_txtv"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Husnat Khalid"
+            android:textColor="@color/txt1"
+            android:textSize="@dimen/_22sdp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_below="@+id/husnatkhalid"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="190dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/attendence"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="32dp"/>
+
+                <TextView
+                    android:id="@+id/stdatendace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/Attendence"
+                    android:textColor="@color/txt1"
+                    android:textSize="@dimen/_17sdp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat,RtlSymmetry" />
+            </soup.neumorphism.NeumorphCardView>
+
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="190dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/upload"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="32dp"/>
+
+                <TextView
+                    android:id="@+id/projectupload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Upload Project"
+                    android:textColor="@color/txt1"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat,RtlSymmetry" />
+            </soup.neumorphism.NeumorphCardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_below="@+id/linear"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/neumorphCardView"
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="190dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_baseline_preview_24"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="32dp"/>
+
+                <TextView
+                    android:id="@+id/viewproject"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="View Projects"
+                    android:textColor="@color/txt1"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"
+                    app:drawableTint="@color/txt1"
+                    app:iconPadding="-50dp"
+
+                    tools:ignore="RtlCompat,RtlSymmetry" />
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="190dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/logout"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="32dp"/>
+
+                <TextView
+                    android:id="@+id/Logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Logout"
+                    android:textColor="@color/txt1"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat,RtlSymmetry" />
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

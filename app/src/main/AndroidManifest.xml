@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vis">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".Global"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VIS">
+        <activity
+            android:name=".ViewReports"
+            android:exported="false" />
+        <activity
+            android:name=".Student.SubmitReport"
+            android:exported="false" />
+        <activity
+            android:name=".Student.ViewOrgProject"
+            android:exported="false" />
+        <activity
+            android:name=".Organization.TotalRegisterStd"
+            android:exported="false" />
+        <activity
+            android:name=".Student.RegisterProject"
+            android:exported="false" />
+        <activity
+            android:name=".ViewProjects"
+            android:exported="false" />
+        <activity
+            android:name=".Organization.UploadProject"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Authencation.RegisterActivity"
+            android:exported="false" />
+        <activity android:name=".AllProjectsActivity" />
+        <activity android:name=".AddProjectActivity" />
+        <activity android:name=".WelcomeAdminActivity" />
+        <activity android:name=".WelcomeOrganizationActivity" />
+        <activity android:name=".WelcomeStudentActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

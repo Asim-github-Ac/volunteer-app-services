@@ -104,14 +104,16 @@
             android:textSize="@dimen/_15sdp"/>
     </soup.neumorphism.NeumorphCardView>
 
-    <soup.neumorphism.NeumorphButton
+    <Button
         style="@style/Widget.Neumorph.Button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/txt1"
+        android:textColor="@color/white"
         android:text="Confirm Now"
+
+        android:background="@drawable/bg_btn"
         android:layout_marginEnd="@dimen/_10sdp"
         android:id="@+id/confirnow" />
 

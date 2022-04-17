@@ -14,6 +14,7 @@ import com.example.vis.SharedPrefrence.PrefManager;
 import com.example.vis.Student.SubmitReport;
 import com.example.vis.databinding.ActivityWelcomeStudentBinding;
 
+
 public class WelcomeStudentActivity extends AppCompatActivity {
     private ActivityWelcomeStudentBinding mActivityBinding;
     PrefManager prefManager;
@@ -23,7 +24,7 @@ public class WelcomeStudentActivity extends AppCompatActivity {
         mActivityBinding = ActivityWelcomeStudentBinding.inflate(getLayoutInflater());
         setContentView(mActivityBinding.getRoot());
         prefManager=new PrefManager(this);
-
+        mActivityBinding.husnatkhalid.setText(prefManager.getUserName());
         mActivityBinding.studentBtnProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

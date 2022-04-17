@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/drawable/dailog_back.xml" value="0.1375" />
+        <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_add_project.xml" value="0.25" />
+        <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_all_projects.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_forget_password.xml" value="0.12552083333333333" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_login.xml" value="0.12552083333333333" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_register.xml" value="0.12552083333333333" />

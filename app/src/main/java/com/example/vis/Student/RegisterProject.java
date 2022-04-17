@@ -36,10 +36,10 @@ public class RegisterProject extends AppCompatActivity {
         orgname=intent.getStringExtra("name");
         orgslots=intent.getStringExtra("slots");
 
-        binding.email.setText(orgemail);
-        binding.name.setText(orgname);
-        binding.enteremail.setText(orgslots);
-        binding.enteremail.setText(prefManager.getUserEmail());
+        binding.email.setText(" Org Email: "+orgemail);
+        binding.name.setText("Name : "+orgname);
+        binding.enteremail.setText("Slots : "+orgslots);
+        binding.enteremail.setText("User Email"+prefManager.getUserEmail());
 
         binding.confirnow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +51,8 @@ public class RegisterProject extends AppCompatActivity {
 
     }
    public void RegisterProject(String orgemail,String orgname,String slots){
+        PrefManager prefManager=new PrefManager(getApplicationContext());
+        prefManager.setUserName(orgemail);
         firestore=FirebaseFirestore.getInstance();
 
        StdRegisterProject stdRegisterProject=new StdRegisterProject(orgemail,orgname,slots,prefManager.getUserEmail());

@@ -23,6 +23,7 @@ public class WelcomeOrganizationActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         prefManager=new PrefManager(this);
         binding.toolbarorg.inflateMenu(R.menu.orgmenu);
+        binding.husnatkhalid.setText(prefManager.getUserName());
         binding.projectupload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

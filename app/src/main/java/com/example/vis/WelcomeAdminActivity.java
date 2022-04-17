@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.vis.SharedPrefrence.PrefManager;
 import com.example.vis.Student.ViewOrgProject;
 import com.example.vis.databinding.ActivityWelcomeAdminBinding;
 import com.example.vis.databinding.ActivityWelcomeOrganizationBinding;
@@ -20,6 +21,9 @@ public class WelcomeAdminActivity extends AppCompatActivity {
         binding = ActivityWelcomeAdminBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        PrefManager prefManager=new PrefManager(getApplicationContext());
+
+        binding.husnatkhalid.setText(prefManager.getUserName());
         binding.manageorg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

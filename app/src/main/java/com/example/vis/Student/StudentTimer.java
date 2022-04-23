@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.vis.R;
+import com.example.vis.WelcomeStudentActivity;
 import com.example.vis.databinding.ActivityStudentTimerBinding;
 import com.example.vis.databinding.ActivityWelcomeStudentBinding;
 
@@ -103,7 +104,9 @@ public class StudentTimer extends AppCompatActivity implements LocationListener 
       String newlat=lat.substring(0,6);
       if (newlat.equals("33.546")){
           progressDialog.dismiss();
-
+          Toast.makeText(this, "Your time start now", Toast.LENGTH_SHORT).show();
+          Intent intent=new Intent(getApplicationContext(), WelcomeStudentActivity.class);
+          startActivity(intent);
       }else {
           Toast.makeText(this, "Location not found", Toast.LENGTH_SHORT).show();
           progressDialog.dismiss();

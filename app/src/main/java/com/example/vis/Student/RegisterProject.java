@@ -39,7 +39,7 @@ public class RegisterProject extends AppCompatActivity {
         binding.email.setText(" Org Email: "+orgemail);
         binding.name.setText("Name : "+orgname);
         binding.enteremail.setText("Slots : "+orgslots);
-        binding.enteremail.setText("User Email"+prefManager.getUserEmail());
+        binding.enteremail.setText("User Email : "+prefManager.getUserEmail());
 
         binding.confirnow.setOnClickListener(new View.OnClickListener() {
             @Override

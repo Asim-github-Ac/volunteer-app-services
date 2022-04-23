@@ -13,4 +13,6 @@
     <string name="Attendence">Attendence</string>
     <string name="register">Register</string>
     <string name="starter_download">Download Start</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>

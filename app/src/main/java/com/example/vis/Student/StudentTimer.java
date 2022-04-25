@@ -20,9 +20,15 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.vis.R;
+import com.example.vis.SharedPrefrence.PrefManager;
 import com.example.vis.WelcomeStudentActivity;
 import com.example.vis.databinding.ActivityStudentTimerBinding;
 import com.example.vis.databinding.ActivityWelcomeStudentBinding;
+import com.example.vis.model.UoloadTimer_Data;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class StudentTimer extends AppCompatActivity implements LocationListener {
     private static final int REQUEST_LOCATION = 1;
@@ -105,8 +111,7 @@ public class StudentTimer extends AppCompatActivity implements LocationListener 
       if (newlat.equals("33.546")){
           progressDialog.dismiss();
           Toast.makeText(this, "Your time start now", Toast.LENGTH_SHORT).show();
-          Intent intent=new Intent(getApplicationContext(), WelcomeStudentActivity.class);
-          startActivity(intent);
+
       }else {
           Toast.makeText(this, "Location not found", Toast.LENGTH_SHORT).show();
           progressDialog.dismiss();
@@ -128,5 +133,26 @@ public class StudentTimer extends AppCompatActivity implements LocationListener 
     public void onProviderEnabled(String provider) {
 
     }
+public void UploadTimer(String endtime,String starttime,String data ,String status){
+    PrefManager prefManager=new PrefManager(this);
 
+    FirebaseFirestore firestore;
+    firestore=FirebaseFirestore.getInstance();
+    UoloadTimer_Data uoloadTimer_data=new UoloadTimer_Data(prefManager.getUserEmail(),starttime,endtime,data,status);
+    firestore.collection("Student_Timing").document("documents").collection(prefManager.getUserEmail()).add(uoloadTimer_data)
+            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                @Override
+                public void onSuccess(DocumentReference documentReference) {
+                    Intent intent=new Intent(getApplicationContext(), WelcomeStudentActivity.class);
+                    startActivity(intent);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+        @Override
+        public void onFailure(@NonNull Exception e) {
+            Toast.makeText(StudentTimer.this, "error"+e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    });
+
+
+}
 }

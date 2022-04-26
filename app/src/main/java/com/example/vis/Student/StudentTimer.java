@@ -112,6 +112,7 @@ public class StudentTimer extends AppCompatActivity implements LocationListener 
           progressDialog.dismiss();
           Toast.makeText(this, "Your time start now", Toast.LENGTH_SHORT).show();
 
+          UploadTimer(binding.endtime.getText().toString(),binding.starttime.getText().toString(),binding.startdate.getText().toString(),"1");
       }else {
           Toast.makeText(this, "Location not found", Toast.LENGTH_SHORT).show();
           progressDialog.dismiss();

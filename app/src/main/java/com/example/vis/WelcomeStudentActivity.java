@@ -13,6 +13,7 @@ import android.view.View;
 
 import com.example.vis.SharedPrefrence.PrefManager;
 import com.example.vis.Student.StudentTimer;
+import com.example.vis.Student.Student_Attendance;
 import com.example.vis.Student.SubmitReport;
 import com.example.vis.databinding.ActivityWelcomeStudentBinding;
 import com.google.android.material.navigation.NavigationView;
@@ -37,6 +38,12 @@ public class WelcomeStudentActivity extends AppCompatActivity {
         // to make the Navigation drawer icon always appear on the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mActivityBinding.husnatkhalid.setText(prefManager.getUserName());
+        mActivityBinding.studentBtnAttendence.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelcomeStudentActivity.this, Student_Attendance.class));
+            }
+        });
         mActivityBinding.studentBtnProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

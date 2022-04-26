@@ -54,8 +54,6 @@ public class Student_Attendance extends AppCompatActivity {
                     mActivityBinding.date.setText(upload.get(0).getDate());
                     mActivityBinding.startdate.setText(upload.get(0).getStarttime());
                     mActivityBinding.endtimeis.setText(upload.get(0).getEndtime());
-
-
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

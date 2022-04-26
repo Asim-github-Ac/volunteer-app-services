@@ -11,6 +11,9 @@ public class UoloadTimer_Data {
         this.status = status;
     }
 
+    public UoloadTimer_Data() {
+    }
+
     public String getEmail() {
         return email;
     }

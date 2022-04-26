@@ -3,6 +3,7 @@ package com.example.vis.Student;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -24,12 +25,18 @@ import java.util.List;
 public class Student_Attendance extends AppCompatActivity {
     ActivityStudentAttendanceBinding mActivityBinding;
     List<UoloadTimer_Data> upload= new ArrayList<>();
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivityBinding = ActivityStudentAttendanceBinding.inflate(getLayoutInflater());
         setContentView(mActivityBinding.getRoot());
 
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setTitle("Student Time");
+        progressDialog.setMessage("Loadding.....");
+        progressDialog.setCancelable(true);
+        progressDialog.show();
         GetDetails();
 
         mActivityBinding.stop.setOnClickListener(new View.OnClickListener() {
@@ -47,19 +54,22 @@ public class Student_Attendance extends AppCompatActivity {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 if (queryDocumentSnapshots.isEmpty()){
+                    progressDialog.dismiss();
                     Toast.makeText(Student_Attendance.this, "Please Start Your Time", Toast.LENGTH_SHORT).show();
                 }else {
+                    progressDialog.dismiss();
                     List<UoloadTimer_Data> uoloadTimer_data=queryDocumentSnapshots.toObjects(UoloadTimer_Data.class);
                     upload.addAll(uoloadTimer_data);
-                    mActivityBinding.date.setText(upload.get(0).getDate());
-                    mActivityBinding.startdate.setText(upload.get(0).getStarttime());
-                    mActivityBinding.endtimeis.setText(upload.get(0).getEndtime());
+                    mActivityBinding.date.setText("Date : "+upload.get(0).getDate());
+                    mActivityBinding.startdate.setText("Start Time : "+upload.get(0).getStarttime());
+                    mActivityBinding.endtimeis.setText("End Time : "+upload.get(0).getEndtime());
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
 
+                progressDialog.dismiss();
                 Toast.makeText(Student_Attendance.this, "Error "+e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

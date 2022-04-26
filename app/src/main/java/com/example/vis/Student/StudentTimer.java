@@ -108,7 +108,7 @@ public class StudentTimer extends AppCompatActivity implements LocationListener 
     public void onLocationChanged(Location location) {
       String lat = String.valueOf(location.getLatitude());
       String newlat=lat.substring(0,6);
-      if (newlat.equals("33.546")){
+      if (newlat.equals("33.546") || newlat.equals("31.405")){
           progressDialog.dismiss();
           Toast.makeText(this, "Your time start now", Toast.LENGTH_SHORT).show();
 

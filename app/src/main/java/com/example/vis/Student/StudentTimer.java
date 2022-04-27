@@ -153,7 +153,8 @@ public void UploadTimer(String endtime,String starttime,String data ,String stat
             Toast.makeText(StudentTimer.this, "error"+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     });
-
+}
+public void AddHistory(){
 
 }
 }

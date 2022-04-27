@@ -17,7 +17,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="wrap_content"
         app:cardElevation="20dp"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
@@ -84,8 +84,21 @@
                 android:id="@+id/stop"
                 android:layout_marginTop="20dp"
                 />
-
+            <Button
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="View History"
+                android:id="@+id/viewhistor"
+                android:layout_marginTop="20dp"
+                />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/rvhistory"/>
 </LinearLayout>
 </layout>

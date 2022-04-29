@@ -34,7 +34,10 @@ public class Attendance_View extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mActivityBinding = ActivityAttendanceViewBinding.inflate(getLayoutInflater());
         setContentView(mActivityBinding.getRoot());
-
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setTitle("Load Attendance");
+        progressDialog.setMessage("Loading.......");
+        progressDialog.show();
         Histtory();
 
     }
@@ -48,10 +51,12 @@ public class Attendance_View extends AppCompatActivity {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         if (queryDocumentSnapshots.isEmpty()){
+                            progressDialog.dismiss();
                             Toast.makeText(Attendance_View.this, "Nothing Found", Toast.LENGTH_SHORT).show();
                         }else {
                             List<UoloadTimer_Data> data=queryDocumentSnapshots.toObjects(UoloadTimer_Data.class);
                             upload.addAll(data);
+                            progressDialog.dismiss();
                             mActivityBinding.recyc.setLayoutManager(new GridLayoutManager(getApplicationContext(),1));
                             viewHistory_adapter=new ViewHistory_Adapter(getApplicationContext(),upload);
                             mActivityBinding.recyc.setAdapter(viewHistory_adapter);
@@ -60,6 +65,7 @@ public class Attendance_View extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                progressDialog.dismiss();
                 Toast.makeText(Attendance_View.this, "error"+e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

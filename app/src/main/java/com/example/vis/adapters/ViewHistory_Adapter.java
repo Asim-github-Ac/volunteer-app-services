@@ -37,7 +37,7 @@ public class ViewHistory_Adapter extends RecyclerView.Adapter<ViewHistory_Adapte
 
         UoloadTimer_Data data1=data.get(position);
         holder.rowBinding.date.setText("Date : "+data1.getDate());
-        holder.rowBinding.endtimeis.setText("End Date : "+data1.getEndtime());
+        holder.rowBinding.endtimeis.setText("Email : "+data1.getEmail());
         holder.rowBinding.startdate.setText("Start Date : "+data1.getStarttime());
         if (data1.getStatus().equals("1")){
             holder.rowBinding.status.setText("Status : "+data1.getStatus());

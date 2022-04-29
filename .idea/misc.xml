@@ -7,6 +7,7 @@
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/drawable/textinput_bg.xml" value="0.1625" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_add_project.xml" value="0.25" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_all_projects.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_attendance_view.xml" value="0.2682291666666667" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_forget_password.xml" value="0.12552083333333333" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_login.xml" value="0.12552083333333333" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_main.xml" value="0.5" />
@@ -22,7 +23,7 @@
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_view_projects.xml" value="0.2682291666666667" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_view_reports.xml" value="0.12239583333333333" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_welcome_admin.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_welcome_organization.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_welcome_organization.xml" value="0.25" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/activity_welcome_student.xml" value="0.21481481481481482" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/adminitem.xml" value="0.4230055658627087" />
         <entry key="..\:/Users/Asim Mehar/Downloads/VIS/app/src/main/res/layout/history_item.xml" value="0.2682291666666667" />

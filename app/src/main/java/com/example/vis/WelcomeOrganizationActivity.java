@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.vis.Attendance.Attendance_View;
 import com.example.vis.Organization.UploadProject;
 import com.example.vis.SharedPrefrence.PrefManager;
 import com.example.vis.databinding.ActivityUploadProjectBinding;
@@ -42,6 +43,12 @@ public class WelcomeOrganizationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(WelcomeOrganizationActivity.this,ViewProjects.class));
+            }
+        });
+        binding.stdatendace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelcomeOrganizationActivity.this, Attendance_View.class));
             }
         });
     }
